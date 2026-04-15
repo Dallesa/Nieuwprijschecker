@@ -6,6 +6,7 @@
     <title>Nieuwprijs Checker - Slimme Browser-extensie voor Prijsvergelijking</title>
     <meta name="description" content="De slimme browser-extensie die automatisch de nieuwprijs checkt terwijl je browst op 2dehands.be en Marktplaats.nl. Binnenkort beschikbaar in de Chrome Web Store.">
     <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <script src="https://unpkg.com/heroicons@2.0.18/24/outline/index.js" type="module"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -19,57 +20,109 @@
         }
     </script>
 </head>
-<body class="bg-white text-gray-900 font-sans">
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="w-8 h-8 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h1 class="text-xl font-bold text-blue-600">Nieuwprijs Checker</h1>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#hoe-het-werkt" class="text-gray-700 hover:text-blue-600">Hoe het werkt</a>
+                <a href="#transparantie" class="text-gray-700 hover:text-blue-600">Transparantie</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Nieuwprijs Checker</h1>
-            <p class="text-xl md:text-2xl mb-6">De slimme browser-extensie die automatisch de nieuwprijs checkt terwijl je browst op 2dehands.be en Marktplaats.nl</p>
-            <div class="inline-block bg-yellow-400 text-black px-4 py-2 rounded-full font-semibold">
+    <section id="hero" class="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="mb-8">
+                <svg class="w-20 h-20 mx-auto text-yellow-400 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Nieuwprijs Checker</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">De slimme browser-extensie die automatisch de nieuwprijs checkt terwijl je browst op 2dehands.be en Marktplaats.nl</p>
+            <div class="inline-flex items-center bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold text-lg shadow-lg">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
                 Binnenkort beschikbaar in de Chrome Web Store
             </div>
         </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
     </section>
 
     <!-- Hoe het werkt Section -->
-    <section class="py-16 bg-gray-50">
+    <section id="hoe-het-werkt" class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Hoe het werkt</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
-                    <h3 class="text-xl font-semibold mb-2">Surf naar een advertentie</h3>
-                    <p class="text-gray-600">Bezoek een productadvertentie op 2dehands.be of Marktplaats.nl.</p>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-800">Hoe het werkt</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-blue-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 text-3xl font-bold">1</div>
+                    <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Surf naar een advertentie</h3>
+                    <p class="text-gray-600 leading-relaxed">Bezoek een productadvertentie op 2dehands.be of Marktplaats.nl en laat onze extensie het werk doen.</p>
                 </div>
-                <div class="text-center">
-                    <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
-                    <h3 class="text-xl font-semibold mb-2">Automatische scan</h3>
-                    <p class="text-gray-600">De extensie scant het product en zoekt de actuele nieuwprijs bij partners zoals Bol.com en Amazon.</p>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-blue-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 text-3xl font-bold">2</div>
+                    <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Automatische scan</h3>
+                    <p class="text-gray-600 leading-relaxed">De extensie scant het product en zoekt de actuele nieuwprijs bij partners zoals Bol.com en Amazon.</p>
                 </div>
-                <div class="text-center">
-                    <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
-                    <h3 class="text-xl font-semibold mb-2">Directe vergelijking</h3>
-                    <p class="text-gray-600">Zie direct of een nieuw exemplaar (met garantie) een betere deal is.</p>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-blue-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 text-3xl font-bold">3</div>
+                    <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Directe vergelijking</h3>
+                    <p class="text-gray-600 leading-relaxed">Zie direct of een nieuw exemplaar (met garantie) een betere deal is en bespaar tijd en geld.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Affiliate Transparantie Section -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-sm text-gray-500 max-w-2xl mx-auto">
-                Als onafhankelijke prijsvergelijker kunnen we een commissie ontvangen bij aankopen via onze links. Dit helpt ons de dienst gratis aan te bieden. Alle prijzen zijn actueel en onafhankelijk gecontroleerd.
-            </p>
+    <section id="transparantie" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                <div class="flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="text-2xl font-semibold text-gray-800">Affiliate Transparantie</h3>
+                </div>
+                <p class="text-gray-600 leading-relaxed text-center">
+                    Als onafhankelijke prijsvergelijker kunnen we een commissie ontvangen bij aankopen via onze links. Dit helpt ons de dienst gratis aan te bieden en onze servers te onderhouden. Alle prijzen zijn actueel en onafhankelijk gecontroleerd. We streven altijd naar de beste deals voor onze gebruikers.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p class="mb-4">&copy; 2026 8848 Consulting. Alle rechten voorbehouden. BTW-nummer: BE0775984558</p>
-            <div class="space-x-4">
-                <a href="#" class="text-blue-400 hover:text-blue-300">Privacy Policy</a>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-lg font-semibold">&copy; 2026 8848 Consulting</p>
+                    <p class="text-sm text-gray-400">BTW-nummer: BE0775984558</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Terms of Service</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p class="text-sm text-gray-400">Gemaakt met ❤️ voor slimme shoppers</p>
             </div>
         </div>
     </footer>
