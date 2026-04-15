@@ -13,7 +13,7 @@ Vaak is het prijsverschil tussen een tweedehands artikel en een nieuw exemplaar 
 - **Direct Besparen:** Schakel met één klik over naar een veilige aankoop met volledige garantie.
 
 ## 📁 Structuur
-- `/` - De bronbestanden voor de officiële landingspagina ([nieuwprijschecker.be](https://nieuwprijschecker.be)).
+- `/` - De bronbestanden voor de officiële landingspagina ([nieuwprijschecker.nl](https://nieuwprijschecker.nl)).
 - `/extension` - De broncode van de Chrome Web Store extensie (Manifest V3).
 
 ## 🛠️ Installatie (Development Mode)
@@ -24,7 +24,7 @@ Vaak is het prijsverschil tussen een tweedehands artikel en een nieuw exemplaar 
 
 ## ⚖️ Juridisch & Privacy
 Dit project is eigendom van **8848 Consulting**. 
-Wij maken gebruik van affiliate links. Dit betekent dat wij een commissie kunnen ontvangen bij een aankoop via onze tool, zonder extra kosten voor de gebruiker. Zie onze [Privacy Policy](https://nieuwprijschecker.be/privacy.html) voor meer informatie.
+Wij maken gebruik van affiliate links. Dit betekent dat wij een commissie kunnen ontvangen bij een aankoop via onze tool, zonder extra kosten voor de gebruiker. Zie onze [Privacy Policy](https://nieuwprijschecker.nl/privacy.html) voor meer informatie.
 
 ---
 *Gerealiseerd door [Sam Dalleine] - IT Consultant & Developer.*
